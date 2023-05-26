@@ -1,0 +1,67 @@
+.account {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    background-color: $light;
+
+    .header-inner {
+        width: 1114px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0 auto;
+
+
+        &__photo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50px;
+            margin-right: 12px;
+        }
+    
+        &__name {
+            margin-right: 16px;
+            font-weight: 700;
+            font-size: 14px;
+            color: $black;
+        }
+    
+        &__logout {
+            padding: 10px 16px 12px;
+            background-color: $white;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #0A0A0A;
+            border: none;
+        }
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        color: $black;
+        margin-top: 43px;
+    }
+
+    &__create {
+        padding: 13px 20px 14px;
+        background-color: $black;
+        color: $light;
+        font-weight: 700;
+        font-size: 16px;
+        border-radius: 24px;
+        margin-top: 40px;
+    }
+}

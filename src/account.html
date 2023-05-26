@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <title>My account</title>
+  </head>
+  <body>
+    <div class="account">
+
+      <!-- Create GANDIVA/ Step1 -->
+      <div class="popup" id="create-step1">
+        <nav class="popup-content">
+          <span class="popup__close" id="popup-close1">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="24" fill="#F1F2FA"/>
+              <path d="M29.2929 30.7071C29.6834 31.0976 30.3166 31.0976 30.7071 30.7071C31.0976 30.3166 31.0976 29.6834 30.7071 29.2929L25.4142 24L30.7071 18.7071C31.0976 18.3166 31.0976 17.6834 30.7071 17.2929C30.3166 16.9024 29.6834 16.9024 29.2929 17.2929L24 22.5858L18.7071 17.2929C18.3166 16.9024 17.6834 16.9024 17.2929 17.2929C16.9024 17.6834 16.9024 18.3166 17.2929 18.7071L22.5858 24L17.2929 29.2929C16.9024 29.6834 16.9024 30.3166 17.2929 30.7071C17.6834 31.0976 18.3166 31.0976 18.7071 30.7071L24 25.4142L29.2929 30.7071Z" fill="#0A0A0A"/>
+            </svg>
+          </span>
+          <h2 class="popup__title">Создать GANDIVA</h2>
+          <form class="form" action="popup_step2.html">
+            <div class="form__box">
+              <input class="form__input" type="text" id="company" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
+              <label class="form__label" for="company">Название компании</label>
+            </div>
+            <div class="form__box">
+              <input class="form__input" type="url" value=".gandiva.ru" id="url" required>
+              <label class="form__label" for="url">URL-адрес</label>
+            </div>
+            <div class="form__box">
+              <input class="form__input" type="text" id="surname" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
+              <label class="form__label" for="surname">Фамилия</label>
+            </div>
+            <div class="form__box">
+              <input class="form__input" type="text" id="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
+              <label class="form__label" for="name">Имя</label>
+            </div>
+            <div class="form__box">
+              <input class="form__input" type="email" id="email" pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$" required>
+              <label class="form__label" for="email">E-mail</label>
+            </div>
+            <button class="form__button form__button_black btn-step1">Создать</button>
+          </form>
+        </nav>
+      </div>
+
+      <!-- Create GANDIVA/ Step2 -->
+      <div class="popup" id="create-step2">
+        <nav class="popup-content">
+          <span class="popup__close" id="popup-close2">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="24" fill="#F1F2FA"/>
+              <path d="M29.2929 30.7071C29.6834 31.0976 30.3166 31.0976 30.7071 30.7071C31.0976 30.3166 31.0976 29.6834 30.7071 29.2929L25.4142 24L30.7071 18.7071C31.0976 18.3166 31.0976 17.6834 30.7071 17.2929C30.3166 16.9024 29.6834 16.9024 29.2929 17.2929L24 22.5858L18.7071 17.2929C18.3166 16.9024 17.6834 16.9024 17.2929 17.2929C16.9024 17.6834 16.9024 18.3166 17.2929 18.7071L22.5858 24L17.2929 29.2929C16.9024 29.6834 16.9024 30.3166 17.2929 30.7071C17.6834 31.0976 18.3166 31.0976 18.7071 30.7071L24 25.4142L29.2929 30.7071Z" fill="#0A0A0A"/>
+            </svg>
+          </span>
+          <h2 class="popup__title">Подождите, мы создаем Вашу GANDIVA…</h2>
+        </nav>
+      </div>
+
+      <header class="header">
+        <div class="header-inner">
+          <img class="header-inner__photo" src="images/photo.jpg" alt="image">
+           <p class="header-inner__name">Иванов Иван</p>
+           <button class="header-inner__logout">Выйти</button>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="main">
+          <p class="main__title">Личный кабинет</p>
+          <a class="main__create form__button_black">Создать GANDIVA</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
