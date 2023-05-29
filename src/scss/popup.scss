@@ -1,0 +1,150 @@
+.popup {
+    transition: 0.5s;
+    color: $black;
+
+    &.open {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: rgba(202, 206, 220, 0.5);
+
+        & .popup-content {
+            transform: translateX(-100%);
+        }
+
+    }
+
+    &-content {
+        right: -640px;
+        position: absolute;
+        top: 0;
+        border-radius: 40px 0px 0px 40px;
+        z-index: 2;
+        transition: 0.5s;
+        background-color: $white;
+        padding: 103px 94px 0;
+        width: 640px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 41.6px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        width: 452px;
+
+        &__box {
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+            .form__input:valid {
+                & + label::after {
+                    content: url(images/valid.svg);
+                    position: absolute;
+                    top: 61px;
+                    right: -36px;
+                }
+            } 
+            #url + label::after {
+                content: url(images/valid.svg);
+                position: absolute;
+                top: 61px;
+                right: -36px;
+            } 
+
+        }
+
+        &__input {
+            margin-top: 8px;
+
+            &[value] {
+                text-align: end;
+            } 
+        }    
+
+        &__button {
+            width: 140px;
+            margin: 40px 0 322px auto;
+        }
+    }
+
+    &__progress {
+        margin-top: 298px;
+        text-align: center;
+        
+        &-percents {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 62.4px;
+        }
+
+        &-bar {
+            width: 452px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: $border-input;
+            margin-top: 40px;   
+
+            &_done {
+                background-color: $black;
+                width: 452px;
+                height: 8px;
+                border-radius: 4px;
+            }
+        }
+     }
+
+     &__text {
+        font-size: 16px;
+        &_step2 {
+            margin: 343px auto 100px;
+            text-align: center;
+        }
+        &_step3 {
+            margin: 140px auto 20px;
+
+            a {
+                text-decoration: underline;
+                color: $black;
+            }
+        }
+      }    
+
+     &__address {
+        margin-top: 140px;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 31.2px;
+     }
+
+     &__link {
+        display: block;
+        margin-top: 30px;
+        font-weight: 700;
+        line-height: 27.3px;
+        font-size: 21px;
+        text-decoration: underline;
+        color: $green;
+        text-align: center;
+     }
+
+     &__btn-step3 {
+        margin-bottom: 233px;
+     }
+}
